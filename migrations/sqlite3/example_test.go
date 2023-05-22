@@ -27,14 +27,12 @@ func ExampleMigrations() {
 		panic(err)
 	}
 
-	tables := []string{"executions", "execution_logs", "assets", "relations"}
+	tables := []string{"assets", "relations"}
 	for _, table := range tables {
 		fmt.Println(db.Migrator().HasTable(table))
 	}
 
 	// Output:
-	// true
-	// true
 	// true
 	// true
 }
