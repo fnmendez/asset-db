@@ -5,12 +5,12 @@ import (
 
 	"github.com/owasp-amass/asset-db/migrations/postgres"
 	migrate "github.com/rubenv/sql-migrate"
-	"gorm.io/driver/sqlite"
+	pg "gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 func ExampleMigrations() {
-	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	db, err := gorm.Open(pg.Open("postgresql://localhost/amassdb?user=postgres&password=postgres"), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
 	}
