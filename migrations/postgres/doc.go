@@ -1,7 +1,4 @@
-// Provides seamless integration
-// with your chosen migrator
-// for managing Postgres migration files
-// with common "up" and "down" parts,
-// simplifying database schema
-// updates and rollbacks.
+// Integrates with migration tools
+// recognizing the standard "migrate up" and "migrate down" annotations,
+// simplifying asset database schema management and rollbacks in Postgres.
 package postgres
